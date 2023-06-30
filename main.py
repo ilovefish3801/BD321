@@ -20,9 +20,9 @@ if __name__ == "__main__":
 
     someArray.pop(1)
 
-    targeteElement = someArray.index(1.6)
-    print(targeteElement)
-    someArray[targeteElement] = "test3"
+    targetElement = someArray.index(1.6)
+    print(targetElement)
+    someArray[targetElement] = "test3"
     print(someArray)
 
     someArray.reverse()
@@ -30,3 +30,37 @@ if __name__ == "__main__":
 
     someArray.clear()
     print(someArray)
+
+    a = [1]
+    b = a
+    a[0] += 1
+    print(a)
+    print(b)
+
+    tempDist = {
+        "name": {
+            "test": "text"
+        }
+
+    }
+
+    print(tempDist["name"])
+
+
+    name = input("Vvedit ima: ")
+    surname = input("Vvedit prizvushce: ")
+    fathers_name = input("Vvedit pobatkovi: ")
+
+
+    name = name.title()
+    surname = surname.title()
+    fathers_name = fathers_name.title()
+
+    personal_data = {
+        "name": name,
+        "surname": surname,
+        "faters  name": fathers_name,
+        "pib": f"{surname} {name} {fathers_name}"
+    }
+
+    print(personal_data)
