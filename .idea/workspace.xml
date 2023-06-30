@@ -19,8 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="a5ab9d84-3bfd-4650-b25f-1fd15e956998" name="Default Changelist" comment="a">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+=======
+    <list default="true" id="a5ab9d84-3bfd-4650-b25f-1fd15e956998" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1688136664379</updated>
     </task>
+<<<<<<< Updated upstream
     <task id="LOCAL-00001" summary="a">
       <created>1688138602474</created>
       <option name="number" value="00001" />
@@ -91,6 +97,8 @@
       <updated>1688138602474</updated>
     </task>
     <option name="localTasksCounter" value="2" />
+=======
+>>>>>>> Stashed changes
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +112,7 @@
       </map>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a" />
     <option name="LAST_COMMIT_MESSAGE" value="a" />
@@ -125,5 +134,24 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="200" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688140735305" />
+=======
+  <component name="WindowStateProjectService">
+    <state width="1899" height="200" key="GridCell.Tab.0.bottom" timestamp="1688138532759">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="200" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1688138532759" />
+    <state width="1899" height="200" key="GridCell.Tab.0.center" timestamp="1688138532758">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="200" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1688138532758" />
+    <state width="1899" height="200" key="GridCell.Tab.0.left" timestamp="1688138532758">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="200" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1688138532758" />
+    <state width="1899" height="200" key="GridCell.Tab.0.right" timestamp="1688138532759">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="200" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1688138532759" />
+>>>>>>> Stashed changes
   </component>
 </project>
