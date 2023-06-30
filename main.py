@@ -46,11 +46,9 @@ if __name__ == "__main__":
 
     print(tempDist["name"])
 
-
     name = input("Vvedit ima: ")
     surname = input("Vvedit prizvushce: ")
     fathers_name = input("Vvedit pobatkovi: ")
-
 
     name = name.title()
     surname = surname.title()
@@ -62,5 +60,5 @@ if __name__ == "__main__":
         "faters  name": fathers_name,
         "pib": f"{surname} {name} {fathers_name}"
     }
-
+    personal_data["age"] = 18
     print(personal_data)
