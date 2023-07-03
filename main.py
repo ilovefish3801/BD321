@@ -81,7 +81,7 @@ if __name__ == "__main__":
         print(theDegrees + 273.15, "Кельвінів")
     elif degrees_Type == 2:
         print(theDegrees - 273.15, "Цельсіїв")
-        print((theDegrees - 273.15) * 1.8000 + 32.00, "Кельвінів")
+        print((theDegrees - 273.15) * 1.8000 + 32.00, "Фарантгейти")
     else:
         print(theDegrees - 32 / 1.8, "Цельсіїв")
         print(theDegrees - 32 / 1.8 + 273.75, "Кельвінів")
