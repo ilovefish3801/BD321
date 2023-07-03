@@ -49,6 +49,10 @@ if __name__ == "__main__":
     name = input("Vvedit ima: ")
     surname = input("Vvedit prizvushce: ")
     fathers_name = input("Vvedit pobatkovi: ")
+    city = input("Vvedit svoe misto: ")
+    address = input("Vvedit svij adress: ")
+    phoneNum = input("Vvedit svij nomer telefonu")
+    index = input("Vvedit svij index: ")
 
     name = name.title()
     surname = surname.title()
@@ -57,8 +61,14 @@ if __name__ == "__main__":
     personal_data = {
         "name": name,
         "surname": surname,
-        "faters  name": fathers_name,
+        "faters_name": fathers_name,
+        "city_info": city,
+        "adress_info": address,
+        "index_info": index,
+        "phoneNum_info": phoneNum,
         "pib": f"{surname} {name} {fathers_name}"
     }
+
     personal_data["age"] = 18
+
     print(personal_data)
