@@ -36,7 +36,8 @@ if __name__ == "__main__":
     #     print("Вам допустимий кредит")
     # else:
     #     print("Вам не допустимий кредит")
-
+    credit_time = int(input("Введіть час кредиту (в місяцях): "))
+    credit_percent = credit_time / 100 * 2
     friend_check = input("Ви привели з собою друга ?")
     friend_credit = bool
     if friend_check == "так":
@@ -44,7 +45,8 @@ if __name__ == "__main__":
     else:
         friend_credit = False
 
-    
+    if friend_credit == True:
+        credit_percent = credit_time / 100 * 1.5
 
 
 
@@ -53,9 +55,9 @@ if __name__ == "__main__":
     age = int(input("Скільки вам років ? "))
     income = int(input("Який у вас дохід ? "))
     category = " "
-    credit_time = int(input("Введіть час кредиту (в місяцях): "))
+
     credit_amount = int(input("Введіть суму кредиту: "))
-    credit_percent = credit_time / 100 * 2
+
     credit_sum = credit_amount * credit_percent
     credit_sum = credit_sum + credit_amount
     credit_per_month = credit_sum / credit_time
