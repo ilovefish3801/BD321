@@ -90,9 +90,10 @@ if __name__ == "__main__":
     with open("products.json", "r", encoding="utf-8") as file:
         products = json.load(file)
 
-        products.sort(key=lambda x: x["title"])
-        print(products)
-        
+        products.sort(key=lambda product: product["price"])
+        sorted_product = sorted(products, key=lambda product: product['price'])
+        print(sorted_product)
+
         # for item in products:
         #     title = item['title']
         #
