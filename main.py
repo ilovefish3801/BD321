@@ -92,6 +92,7 @@ if __name__ == "__main__":
 
         products.sort(key=lambda x: x["title"])
         print(products)
+        
         # for item in products:
         #     title = item['title']
         #
