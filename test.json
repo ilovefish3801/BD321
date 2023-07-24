@@ -1,0 +1,19 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "owner_name": "John Doe",
+      "balance": 5000
+    },
+    {
+      "id": 2,
+      "owner_name": "Jane Smith",
+      "balance": 10000
+    },
+    {
+      "id": 3,
+      "owner_name": "Bob Johnson",
+      "balance": 3000
+    }
+  ]
+}
