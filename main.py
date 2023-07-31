@@ -1,87 +1,55 @@
+import telebot
+from telebot import types
+
 if __name__ == "__main__":
-    # first_name = str("John")
-    # second_name = str("Doe")
-    # third_name = str("Patrick")
-    #
-    # user_data = {"name": first_name, "fathersName": third_name, "surname": second_name,
-    #              "pib": f"{second_name.title()} {first_name[0].upper()}. {third_name[0].upper()}.", 'age': 26}
-    #
-    # # print(third_name[::-1])
-    #
-    # print(user_data)
-    #
-    # arr_names = ("John", "Jerry", "Simon")
-    #
-    # arr_surnames = {"Doe", "Lee", "Chan"}
-    #
-    # arr_surnames.add('test')
-    # arr_surnames.remove('Lee')
-    #
-    # print(arr_surnames)
 
-    users = [
-        {
-            "name": "John",
-            "age": 31
-        },
-        {
-            "name": "Jane",
-            "age": 27,
-            "family": {
-                'mom': {
-                    "name": "Sophie",
-                    "age": 54,
-                },
-                'dad': {
-                    "name": "Johny",
-                    "age": 56,
-                },
+    bot = telebot.TeleBot("6342244998:AAEfTjyeKwBQtadMfGfDYchZxSESt0Vs-tI")
 
-            },
-        },
-        {
-            "name": "Jack",
-            "age": 15
-        },
-        {
-            "name": "Jonathan",
-            "age": 38
-        },
-    ]
 
-    # print(users[2]['name'], users[2]['age'])
-    # print(users[1]["family"])
+    def primeNumbers(star_value, end_value):
+        simpleNum = []
+        for i in range(star_value, end_value):
+            flag = True
+            for j in range(star_value, end_value):
+                if j != 1 and i != j and j <= i:
+                    result = i % j
+                    if result == 0:
+                        flag = False
+                        break
+            if flag:
+                simpleNum.append(i)
+        return simpleNum
 
-    # temp_age = users[1]['age']
-    # temp_name = users[1]['name']
-    #
-    # if temp_age >= 18:
-    #     print(temp_name, "you are 18 or older congrats !")
-    # elif temp_name <= 18:
-    #     print(temp_name, "you are a child I wont sell you any drinks >:(")
 
-    # degrees = int(input("Введіть температуру: "))
-    #
-    # if degrees > 0:
-    #     print("Тепло вдягнись легше")
-    # elif degrees < 0:
-    #     print("Ух, як холодно. Вдягни щось тепле")
-    # else:
-    #     print("Вдягнись як хочеш")
+    def main_reply_menu():
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        # itembtn1 = types.KeyboardButton('a')
+        # itembtn2 = types.KeyboardButton('v')
+        # itembtn3 = types.KeyboardButton('d')
+        # markup.add(itembtn1, itembtn2, itembtn3)
+        markup.row(types.KeyboardButton("BTN 1"), types.KeyboardButton("BTN 2"), types.KeyboardButton("BTN 3"))
+        markup.row(types.KeyboardButton("Прості числа"))
+        return markup
 
-    print("""1-Цельсії""")
-    print("""2-Кельвіни""")
-    print("""3-Фарантгейти""")
 
-    theDegrees = int(input("Введіть градуси: "))
-    degrees_Type = int(input("Введіть вид градусу: "))
+    @bot.message_handler(commands=['start', 'help'])
+    def send_welcome(msg):
+        # bot.reply_to(message, "Howdy, how are you doing?")
+        cid = msg.chat.id
+        bot.send_message(cid, "Hello !", reply_markup=main_reply_menu())
 
-    if degrees_Type == 1:
-        print(theDegrees * 1.8 + 32, "Фарантгейтів")
-        print(theDegrees + 273.15, "Кельвінів")
-    elif degrees_Type == 2:
-        print(theDegrees - 273.15, "Цельсіїв")
-        print((theDegrees - 273.15) * 1.8000 + 32.00, "Фарантгейти")
-    else:
-        print(theDegrees - 32 / 1.8, "Цельсіїв")
-        print(theDegrees - 32 / 1.8 + 273.75, "Кельвінів")
+
+    @bot.message_handler(func=lambda message: True)
+    def echo_all(msg):
+        cid = msg.chat.id
+        # bot.reply_to(message, message.text)
+        if msg.text == "Прості числа":
+            numbers = primeNumbers(1, 100)
+            temp_text = "Список простих чисел: \n\n"
+            for num in numbers:
+                temp_text += f"{num} "
+
+            bot.send_message(cid, temp_text)
+
+
+    bot.infinity_polling()
