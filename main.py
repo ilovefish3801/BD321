@@ -7,6 +7,7 @@ if __name__ == "__main__":
         bot = telebot.TeleBot("6342244998:AAEfTjyeKwBQtadMfGfDYchZxSESt0Vs-tI")
         users = {}
 
+
         def getName(msg):
             cid = msg.chat.id
             txt = msg.text
@@ -15,12 +16,14 @@ if __name__ == "__main__":
             mess = bot.send_message(cid, "Enter your age: ")
             bot.register_next_step_handler(mess, getAge)
 
+
         def getAge(msg):
             cid = msg.chat.id
             age = msg.text
             users[f"{cid}"]["age"] = age
             bot.send_message(cid, "Thanks for answering this survey", reply_markup=main_reply_menu())
             print(users)
+
 
         def primeNumbers(star_value, end_value):
             simpleNum = []
@@ -111,5 +114,6 @@ if __name__ == "__main__":
             elif msg.text == "Ask me":
                 mess = bot.send_message(cid, "Tell me your name: ")
                 bot.register_next_step_handler(mess, getName)
+
 
         bot.infinity_polling()
